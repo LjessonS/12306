@@ -5,22 +5,22 @@ set:
   # - 2018-01-06
   # - 2018-01-07
   station_dates:
-    - "2019-01-11"
+    - "2019-02-02"
 
   # 是否根据时间范围 和 乘车类型 购票
   # 否则将需要手动填写车次
   is_by_time: False
 
   # 列车类型: 高铁 G 动车 D 其它火车 O
-  train_types: [G,D,O]
+  train_types: [G]
 
   # 可接受最早出发时间 格式ex：
   # departure_time: "8:00"
-  departure_time: "00:00"
+  departure_time: "8:00"
 
   # 可接受最晚抵达时间 格式ex：
   # arrival_time: "16:00"
-  arrival_time: "24:00"
+  arrival_time: "21:30"
 
   # 可接受最长旅途时间 格式ex：
   # take_time: "24:00"
@@ -45,21 +45,69 @@ set:
 #    - "G1021"
 #    - "G99"
 #    - "G6011"
-    - "D2972"
-    - "D1874"
-    - "D2834"
+    - "G72"
+    - "G1002"
+    - "G6012"
+    - "G6164"
+    - "G1312"
+    - "G280"
+    - "G80"
+    - "G1004"
+    - "G6182"
+    - "G6032"
+    - "G6030"
+    - "G1006"
+    - "G818"
+    - "G532"
+    - "G532"
+    - "G822"
+    - "G1008"
+    - "G6016"
+    - "G1010"
+    - "G100"
+    - "G6034"
+    - "G6018"
+    - "G1032"
+    - "G826"
+    - "G840"
+    - "G1012"
+    - "G554"
+    - "G1028"
+    - "G6020"
+    - "G6146"
+    - "G6022"
+    - "G6002"
+    - "G1018"
+    - "G1036"
+    - "G1014"
+    - "G9698"
+    - "G76"
+    - "G6160"
+    - "G1020"
+    - "G634"
+    - "G1022"
+    - "G6024"
+    - "G6114"
+    - "G6014"
+    - "G6026"
+    - "G638"
+    - "G6038"
+   
 
   # 出发城市，比如深圳北，就填深圳就搜得到
-  from_station: "广州南"
+  from_station: "深圳"
 
   # 到达城市 比如深圳北，就填深圳就搜得到
-  to_station: "三江南"
+  to_station: "长沙"
 
   # 座位(list) 多个座位ex:
   # - "二等座"
   # - "一等座"
   set_type:
+  - "特等座"
+  - "一等座"
   - "二等座"
+  
 
   # 当余票小于乘车人，如果选择优先提交，则删减联系人和余票数一致在提交
   is_more_ticket: True
@@ -68,12 +116,12 @@ set:
   # - "张三"
   # - "李四"
   ticke_peoples:
-#    - "文贤平"
-    - "梁敏"
+#    - "刘盛"
+    - "刘盛"
   # 12306登录账号(list)
   12306account:
-    - user: "931128603@qq.com"
-    - pwd: ""
+    - user: "TARDIS93"
+    - pwd: "less2274353332"
 
 # 加入小黑屋时间，此功能为了防止僵尸票导致一直下单不成功错过正常的票
 ticket_black_list_time: 5
@@ -86,8 +134,8 @@ auto_code_type: 2
 
 # 打码平台账号
 auto_code_account:
-  user: "931128603"
-  pwd: ""
+  user: "jesson"
+  pwd: "123asd456"
 
 #  邮箱配置，如果抢票成功，将通过邮件配置通知给您
 #  列举163
@@ -104,17 +152,17 @@ auto_code_account:
 #  host: "smtp.qq.com"
 email_conf:
   is_email: True
-  email: "931128603@qq.com "
-  notice_email_list: "931128603@qq.com"
-  username: "931128603"
-  password: ""
+  email: "ltww2274@foxmail.com "
+  notice_email_list: "ltww2274@foxmail.com"
+  username: "TARDIS93"
+  password: "less2274353332"
   host: "smtp.qq.com"
 
 # 是否开启cdn查询，可以更快的检测票票 1为开启，2为关闭
 is_cdn: 1
 
 # 下单接口分为两种，1 为快速下单，2 是普通下单
-order_type: 1
+order_type: 2
 
 # 下单模式 1 为预售，整点刷新，刷新间隔0.1-0.5S, 然后会校验时间，比如12点的预售，那脚本就会在12.00整检票，刷新订单
 #         2 是捡漏，捡漏的刷新间隔时间为0.5-3秒，时间间隔长，不容易封ip

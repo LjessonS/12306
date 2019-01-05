@@ -1,5 +1,3 @@
-*.html
-*.pyc
-*.yaml
-*.log
-.idea/
+.project
+.pydevproject
+.settings
